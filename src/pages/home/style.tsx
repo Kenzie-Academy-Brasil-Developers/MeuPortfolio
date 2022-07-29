@@ -105,17 +105,17 @@ export const ProjectsAreaContent = styled("div", {
   width: "100%",
   //height: '70vh',
   //overflowY: 'scroll',
-  '::-webkit-scrollbar': {
-    width: '5px',
-    height: '5px'
+  '&::-webkit-scrollbar': {
+    width: '3px',
+    height: '3px'
   },
-  '::-webkit-scrollbar-track': {
+  '&::-webkit-scrollbar-track': {
     background:'#f1f1f1',
   },
-  '::-webkit-scrollbar-thumb': {
+  '&::-webkit-scrollbar-thumb': {
     background: '#888'
   },
-  '::-webkit-scrollbar-thumb:hover': {
+  '&::-webkit-scrollbar-thumb:hover': {
     background: '#555'
   },
   display: "grid",
