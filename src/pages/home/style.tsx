@@ -3,35 +3,43 @@ import { Flex } from "@/styles/Global";
 import { Button } from "@/styles/Buttons";
 import { css } from "@stitches/react"
 
-import img from "@/public/static/img/background/header-bg.svg";
+import img from "@/public/static/img/background/back.png";
 import dots from "@/public/static/img/background/dots.svg";
 
 export const Header = styled("header", {
   backgroundColor: "$grey1",
-  padding: "12rem 0 8rem 0",
   backgroundImage: `url(${img})`,
-  backgroundRepeat: "no-repeat",
-  backgroundPosition: "right",
-  backgroundAttachment: "fixed",
+  backgroundRepeat: "repeat",
+  backgroundPosition: "left",
+  //backdropFilter: "opacity(10%)",
+  //backgroundAttachment: "fixed",
+  padding: "12rem 0 8rem 0",
   borderBottom: "2px solid $grey5",
   "@tablet": {
-    backgroundPosition: "right -30% center",
+    //backgroundPosition: "right -30% center",
   },
   "@mobile": {
     padding: "9rem 0 6rem 0",
-    backgroundImage: `none`,
+    //backgroundImage: `none`,
   },
 });
 
 export const HeaderContent = styled("div", {
-  maxWidth: "100%",
-  width: "36rem",
+  width: "80%",
+  maxWidth: "90%",
+  padding: "5px",
+  borderRadius: "10px",
+  position: "relative",
+  backgroundColor: "rgba(239, 195, 234)",
   display: "flex",
   flexDirection: "column",
   gap: "$2",
   "@tablet": {
-    width: "30rem",
+    width: "600px",
   },
+  "@mobile": {
+    alignSelf: "center",
+  }
 });
 
 export const HeaderButtonsArea = styled(Flex, {
@@ -56,19 +64,16 @@ export const StackSection = styled("div", {
 });
 
 export const StackCards = styled("div", {
-  display: "grid",
-  gridTemplateColumns: "1fr 1fr 1fr 1fr",
-  padding: "3rem 0",
-  gap: "6rem",
-  marginTop: "$4",
+  display: "flex",
+  justifyContent: "center",
+  maxWidth: "100%",
+  //height: '50%',
+  //overflow: 'scroll',
+  //maxHeight: '500px',
+  padding: "2rem 0",
+  gap:"5rem",
+  flexWrap: "wrap"
 
-  "@tablet": {
-    gridTemplateColumns: "1fr 1fr 1fr",
-  },
-
-  "@mobile": {
-    gridTemplateColumns: "1fr 1fr",
-  },
 });
 
 export const ProjectsArea = styled("section", {
@@ -98,6 +103,21 @@ export const ProjectsAreaSocialMediaMessage = styled("div", {
 
 export const ProjectsAreaContent = styled("div", {
   width: "100%",
+  //height: '70vh',
+  //overflowY: 'scroll',
+  '::-webkit-scrollbar': {
+    width: '5px',
+    height: '5px'
+  },
+  '::-webkit-scrollbar-track': {
+    background:'#f1f1f1',
+  },
+  '::-webkit-scrollbar-thumb': {
+    background: '#888'
+  },
+  '::-webkit-scrollbar-thumb:hover': {
+    background: '#555'
+  },
   display: "grid",
   gridTemplateColumns: "repeat(2, 1fr)",
   gridGap: "4rem",

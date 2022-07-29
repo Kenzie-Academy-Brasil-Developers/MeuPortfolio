@@ -9,10 +9,15 @@
   },
   "dependencies": {
     "@stitches/react": "^1.2.8",
+    "@types/react-lottie": "^1.2.6",
+    "@types/styled-components": "^5.1.25",
     "framer-motion": "^6.4.2",
+    "prop-types": "^15.8.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-icons": "^4.4.0",
+    "react-lottie": "^1.2.3",
+    "styled-components": "^5.3.5",
     "use-media": "^1.4.0"
   },
   "devDependencies": {

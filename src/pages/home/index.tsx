@@ -1,20 +1,19 @@
-// Styles
+
 import { Container, Flex } from "@/styles/Global";
 import { Text } from "@/styles/Text";
 import { Button } from "@/styles/Buttons";
+import { Robot } from "@/components/RobotHi"
 
-// Components
+
 import { Stack } from "@/components/Stack";
 import { Project } from "@/components/Project";
 import { Contacts } from "@/components/Contacts";
 
-// Data
 import { stackData } from "@/utils/stackData";
 import { userData } from "@/utils/userData";
 
 import { FaGithub } from "react-icons/fa";
 
-// Page Style
 import {
   Header,
   HeaderContent,
@@ -26,7 +25,7 @@ import {
   ProjectAreaWrapperColumns,
   ProjectsAreaContent,
 } from "./style";
-import { HandEffect } from "@/components/HandEffect";
+
 
 export const Home = (): JSX.Element => {
   return (
@@ -34,19 +33,20 @@ export const Home = (): JSX.Element => {
       <Header>
         <Container>
           <HeaderContent>
+          <Robot/>
             <Flex>
               <UserImage
                 src={`https://github.com/${userData.githubUser}.png`}
                 alt={userData.nameUser}
                 title={userData.nameUser}
-                width={"48px"}
-                height={"48px"}
+                width={"60px"}
+                height={"60px"}
               />
-              <Text color="grey4" css={{ marginLeft: "$2" }}>
-                Hello, my name is {userData.nameUser} <HandEffect />
+              <Text color="grey1" css={{ marginLeft: "$2" }}>
+                Hello, my name is {userData.nameUser}
               </Text>
             </Flex>
-            <Text as="h1" type="heading1" color="grey5">
+            <Text as="h1" type="heading1" color="grey1">
               I{" "}
               <Text as="span" type="heading1" color="brand1">
                 love
@@ -57,7 +57,7 @@ export const Home = (): JSX.Element => {
               </Text>{" "}
               projects
             </Text>
-            <Text type="body1" color="grey2">
+            <Text type="body1" color="grey1">
               Discover here in this environment, created especially for you, all
               my projects and technologies
             </Text>
@@ -69,7 +69,7 @@ export const Home = (): JSX.Element => {
                 as="a"
                 type="circle"
                 target="_blank"
-                href={userData.githubUser}
+                href={`https://github.com/${userData.githubUser}`}
               >
                 <FaGithub />
               </Button>

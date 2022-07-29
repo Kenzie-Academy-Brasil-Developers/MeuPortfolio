@@ -11,30 +11,19 @@ import { Text } from "@/styles/Text";
 import { useEffect, useState } from "react";
 import { FaGithub, FaShare } from "react-icons/fa";
 import { userData } from "@/utils/userData";
+import repositories from "@/utils/reposData";
 
 interface ReposType {
   id: number;
   name: string;
   language: string;
   description: string;
-  git_url: string;
+  html_url: string;
   homepage: string;
+  imgUrl: string;
 }
 
 export const Project = (): JSX.Element => {
-  const [repositories, setRepositories] = useState<ReposType[]>([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await fetch(
-        `https://api.github.com/users/${userData.githubUser}/repos`
-      );
-      const json = await data.json();
-      setRepositories(json);
-      return json;
-    };
-    fetchData();
-  }, []);
 
   return (
     <>
@@ -69,10 +58,10 @@ export const Project = (): JSX.Element => {
           </ProjectStack>
 
           <Text type="body1" color="grey2">
-            {repository.description.substring(0, 129)}
+            {repository.description?.substring(0, 129)}
           </Text>
           <ProjectLinks>
-            <ProjectLink target="_blank" href={repository.git_url}>
+            <ProjectLink target="_blank" href={repository.html_url}>
               <FaGithub /> Github Code
             </ProjectLink>
             {repository.homepage && (

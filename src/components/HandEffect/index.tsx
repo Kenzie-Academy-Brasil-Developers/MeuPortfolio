@@ -2,9 +2,10 @@ import { useEffect, useRef } from "react";
 import { keyframes } from "@stitches/react";
 
 export const scaleUp = keyframes({
-  "0%": { transform: "rotate(320deg)" },
-  "50%": { transform: "rotate(260deg)" },
-  "100%": { transform: "rotate(320deg)" },
+  "0%": { transform: "rotate(-50deg)" },
+  "50%": { transform: "rotate(30deg)" },
+  //"75%": { transform: "rotate(50deg)" },
+  "100%": { transform: "rotate(-50deg)" },
 });
 
 export const HandEffect = () => {
@@ -14,7 +15,8 @@ export const HandEffect = () => {
     const observer = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting) {
         setInterval(() => {
-          hand.current.style.animation = `${scaleUp} 1s ease`;
+          hand.current.style.animation = `${scaleUp} 2s ease-in-out`;
+          hand.current.style.animationIterationCount = "infinite"
         }, 500);
       }
     });

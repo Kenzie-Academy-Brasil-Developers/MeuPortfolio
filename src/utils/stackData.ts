@@ -4,32 +4,37 @@ import imgJS from "../public/static/img/stack/js.svg";
 import imgNode from "../public/static/img/stack/node.svg";
 import imgStyled from "../public/static/img/stack/styled.svg";
 import imgReact from "../public/static/img/stack/react.svg";
-import { FaVuejs } from "react-icons/fa";
+import { SiTypescript, SiPython, SiRedux } from "react-icons/si";
+
 
 export const stackData = [
-  {
-    title: "HTML",
-    img: imgHTML,
-  },
-  {
-    title: "CSS",
-    img: imgCSS,
-  },
   {
     title: "JS",
     img: imgJS,
   },
+  { title: "Typescript", img: SiTypescript },
   {
     title: "Node JS",
     img: imgNode,
+  },
+  { title: "Python", img: SiPython },
+  {
+    title: "React",
+    img: imgReact,
+  },
+  { title: "Redux", img: SiRedux },
+  {
+    title: "HTML5",
+    img: imgHTML,
   },
   {
     title: "Styled Components",
     img: imgStyled,
   },
   {
-    title: "React",
-    img: imgReact,
-  },
-  { title: "Vuejs", img: FaVuejs },
+    title: "CSS3",
+    img: imgCSS,
+  }
 ];
+
+
