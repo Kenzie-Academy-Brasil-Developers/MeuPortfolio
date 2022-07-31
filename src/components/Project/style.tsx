@@ -25,9 +25,18 @@ export const ProjectLink = styled("a", {
   display: "flex",
   alignItems: "center",
   lineHeight: "0",
+  width: 'fit-content',
+  filter: 'grayscale(1)',
 
-  "&:hover":{
-    color: "$grey5"
+  "&:hover": {
+    filter: 'none',
+    color: "$brand2",
+  },
+
+  '>div': {
+    width: '20px !important',
+    margin: '0.2rem !important',
+
   },
 
   [`& svg`]: {

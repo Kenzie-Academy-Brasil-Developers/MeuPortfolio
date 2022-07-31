@@ -3,14 +3,16 @@ import { Flex } from "@/styles/Global";
 import { Button } from "@/styles/Buttons";
 import { css } from "@stitches/react"
 
-import img from "@/public/static/img/background/back.png";
+import img from "@/public/static/img/background/polygons1.svg";
 import dots from "@/public/static/img/background/dots.svg";
 
 export const Header = styled("header", {
   backgroundColor: "$grey1",
   backgroundImage: `url(${img})`,
-  backgroundRepeat: "repeat",
-  backgroundPosition: "left",
+  overflowY: 'hidden',
+  maxWidth: '100vw',
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "cover",
   //backdropFilter: "opacity(10%)",
   //backgroundAttachment: "fixed",
   padding: "12rem 0 8rem 0",
@@ -25,12 +27,12 @@ export const Header = styled("header", {
 });
 
 export const HeaderContent = styled("div", {
-  width: "80%",
-  maxWidth: "90%",
+  width: "70%",
+  maxWidth: "80%",
   padding: "5px",
   borderRadius: "10px",
   position: "relative",
-  backgroundColor: "rgba(239, 195, 234)",
+  //backgroundColor: "rgba(239, 195, 234)",
   display: "flex",
   flexDirection: "column",
   gap: "$2",
@@ -64,15 +66,52 @@ export const StackSection = styled("div", {
 });
 
 export const StackCards = styled("div", {
+  'scroll-margin-block-start': '110px',
+  /*Adds margin to the top of the viewport*/
+  
+  'scroll-margin-block-end': '110px',
+  /*Adds margin to the bottom of the viewport*/
+  position: "relative",
+  //bottom: '-20px',
+  width: '90%',
+  marginLeft: '5%',
+  marginTop: '-5%',
+  //zIndex: '9999999999999',
+  //padding: "1rem",
+  backgroundColor: "#D595C9",
+  //backgroundColor: "rgb(121, 227, 234)",
+  //backgroundImage: `url(${dots})`,
+  //backgroundRepeat: "no-repeat",
+  //backgroundPosition: "left top 1rem",
   display: "flex",
   justifyContent: "center",
-  maxWidth: "100%",
+  height: "fit-content",
+  padding: "2rem",
+  border: '2px solid white',
+  borderRadius: '10px',
+  
+  //backgroundColor: "$grey1",
+    gap:"5rem",
+    flexWrap: "wrap",
+  "@mobile": {
+    //backgroundPosition: "right top 0rem",
+    //padding: " 0",
+
+  },
+  '>div': {
+    
+  }
+  /*
+  //position: 'absolute',
+  maxWidth: "80%",
+  marginTop: '-5%',
+  //bottom: '-10%',
   //height: '50%',
   //overflow: 'scroll',
   //maxHeight: '500px',
   padding: "2rem 0",
   gap:"5rem",
-  flexWrap: "wrap"
+  flexWrap: "wrap"*/
 
 });
 

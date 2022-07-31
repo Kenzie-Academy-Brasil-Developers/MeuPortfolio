@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 import { FaGithub, FaShare } from "react-icons/fa";
 import { userData } from "@/utils/userData";
 import repositories from "@/utils/reposData";
+import { GithubAnimation } from "../GitHubAnimation";
 
 interface ReposType {
   id: number;
@@ -62,7 +63,7 @@ export const Project = (): JSX.Element => {
           </Text>
           <ProjectLinks>
             <ProjectLink target="_blank" href={repository.html_url}>
-              <FaGithub /> Github Code
+              <GithubAnimation/> Github Code
             </ProjectLink>
             {repository.homepage && (
               <ProjectLink target="_blank" href={repository.homepage}>

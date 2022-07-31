@@ -27,6 +27,7 @@ export const Footer = (): JSX.Element => {
             <Text type="body1" color="grey2">
               Follow me on my social networks and let's talk
             </Text>
+            {/*<a target="_blank" href="https://icons8.com/icon/77971/developer">Developer</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>*/}
           </Box>
         </Flex>
         <Flex>

@@ -74,6 +74,9 @@ export const globalStyles = globalCss({
     fontFamily: "'Inter', sans-serif",
     boxSizing: "border-box",
   },
+  main: {
+    backgroundColor: '$grey0'
+  },
   html: {
     scrollBehavior: "smooth",
   },
@@ -83,8 +86,8 @@ export const globalStyles = globalCss({
 export const GlobalStyle: React.FC<GlobalStyleProps> = ({ children }) => {
   const theme = createTheme({
     colors: {
-      brand1: "#f56fc3",
-      brand2: "#f56fc3",
+      brand1: "#ea8fdf",
+      brand2: "#EA8FDF",
       brand3: "#50CF9A",
       brand4: "#E5F8F0",
       brand5: "#f56fc3",

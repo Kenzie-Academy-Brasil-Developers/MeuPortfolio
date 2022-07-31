@@ -25,6 +25,7 @@ import {
   ProjectAreaWrapperColumns,
   ProjectsAreaContent,
 } from "./style";
+import { GithubAnimation } from "@/components/GitHubAnimation";
 
 
 export const Home = (): JSX.Element => {
@@ -42,28 +43,27 @@ export const Home = (): JSX.Element => {
                 width={"60px"}
                 height={"60px"}
               />
-              <Text color="grey1" css={{ marginLeft: "$2" }}>
+              <Text color="grey4" css={{ marginLeft: "$2" }}>
                 Hello, my name is {userData.nameUser}
               </Text>
             </Flex>
-            <Text as="h1" type="heading1" color="grey1">
-              I{" "}
+            <Text as="h1" type="heading1" color="grey4">
               <Text as="span" type="heading1" color="brand1">
-                love
+                Amo
               </Text>{" "}
-              creating and{" "}
+              criar e {" "}
               <Text as="span" type="heading1" color="brand1">
-                developing
+                desenvolver
               </Text>{" "}
-              projects
+              projetos
             </Text>
-            <Text type="body1" color="grey1">
+            <Text type="body1" color="grey4">
               Discover here in this environment, created especially for you, all
               my projects and technologies
             </Text>
             <HeaderButtonsArea>
               <Button as="a" type="primary" href="#projects">
-                See Projects
+                Ver projetos
               </Button>
               <Button
                 as="a"
@@ -71,17 +71,19 @@ export const Home = (): JSX.Element => {
                 target="_blank"
                 href={`https://github.com/${userData.githubUser}`}
               >
-                <FaGithub />
+                <GithubAnimation/>
               </Button>
             </HeaderButtonsArea>
-            <StackCards>
+          </HeaderContent>
+        </Container>
+        
+      </Header>
+      <StackCards id="technologies">
               {stackData.map((stack, index) => (
                 <Stack key={index} title={stack.title} icon={stack.img} />
               ))}
-            </StackCards>
-          </HeaderContent>
-        </Container>
-      </Header>
+      </StackCards>
+      
       <ProjectsArea id="projects">
         <Container>
           <ProjectAreaWrapperColumns>
