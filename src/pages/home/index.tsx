@@ -36,7 +36,7 @@ export const Home = (): JSX.Element => {
   const flexVariant: Variants = {
     offscreen: {
       x: -300,
-      opacity: 0
+      opacity: 0,
     },
     onscreen: {
       x: 0,
@@ -65,9 +65,11 @@ export const Home = (): JSX.Element => {
                 width={"60px"}
                 height={"60px"}
               />
-              <Text color="grey4" css={{ marginLeft: "$2" }}>
-                Hello, my name is {userData.nameUser}
+              <div id='typing'>
+              <Text color="grey4">
+                Olá, me chamo Vitória
               </Text>
+              </div>
             </Flex>
             <motion.div variants={flexVariant}>
             <Text as="h1" type="heading1" color="grey4">
@@ -81,8 +83,7 @@ export const Home = (): JSX.Element => {
               projetos
             </Text>
             <Text type="body1" color="grey4">
-              Discover here in this environment, created especially for you, all
-              my projects and technologies
+              Aqui poderá conhecer alguns de meus projetos e tecnologias que aprendi
             </Text>
             <HeaderButtonsArea>
               <Button as="a" type="primary" href="#projects">
@@ -119,14 +120,14 @@ export const Home = (): JSX.Element => {
           <ProjectAreaWrapperColumns>
             <ProjectsAreaSocialMediaMessage>
               <Text as="h2" type="heading4" color="grey4">
-                My projects
+                Meus projetos
               </Text>
-              <Text as="p" type="body1" color="grey2">
-                Projects created at{" "}
+              {/*<Text as="p" type="body1" color="grey2">
+                Projetos cread{" "}
                 <Text as="span" color="brand5">
                   Kenzie Academy
                 </Text>
-              </Text>
+              </Text>*/}
             </ProjectsAreaSocialMediaMessage>
             <ProjectsAreaContent>
               <Project />

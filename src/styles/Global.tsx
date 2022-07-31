@@ -76,7 +76,9 @@ export const globalStyles = globalCss({
     boxSizing: "border-box",
   },
   main: {
-    backgroundColor: '$grey0'
+    backgroundColor: '$grey0',
+    maxWidth: '100vw',
+    overflowX: 'hidden',
   },
   html: {
     scrollBehavior: "smooth",

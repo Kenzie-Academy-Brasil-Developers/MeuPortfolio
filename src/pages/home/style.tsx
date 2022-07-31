@@ -1,4 +1,5 @@
 import { styled } from "@/styles/stitches.config";
+import { keyframes } from '@stitches/react';
 import { Flex } from "@/styles/Global";
 import { Button } from "@/styles/Buttons";
 import { css } from "@stitches/react";
@@ -6,6 +7,16 @@ import { motion, useViewportScroll } from "framer-motion";
 
 import img from "@/public/static/img/background/polygons1.svg";
 import dots from "@/public/static/img/background/dots.svg";
+
+const typing = keyframes({
+  from: { width: '0' },
+  to: { width: '100%' }
+});
+
+const blink = keyframes({
+  'from, to': { borderColor: 'transparent' },
+  '50%': { borderColor: '#ec8ee1'}
+})
 
 export const Header = styled("header", {
   backgroundColor: "$grey1",
@@ -43,7 +54,16 @@ export const HeaderContent = styled(motion.div, {
   },
   "@mobile": {
     alignSelf: "center",
-  }
+  },
+  "#typing p": {
+      borderRight: '.15em solid #ec8ee1',
+      overflow: 'hidden',
+      //margin: '0 auto',
+      animation: `${typing} 5s steps(30, end), ${blink} .75s step-end infinite`,
+
+      whiteSpace: 'nowrap',
+  },
+    
 });
 
 export const HeaderButtonsArea = styled(Flex, {
