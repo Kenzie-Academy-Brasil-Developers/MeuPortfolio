@@ -1,6 +1,7 @@
 import { StackCard } from "./style";
 import { Text } from "@/styles/Text";
 import { IconType } from "react-icons/lib";
+import { motion, useViewportScroll, Variants } from "framer-motion";
 
 interface StackProps {
   title: string;
@@ -14,8 +15,24 @@ export const Stack = (
 ): JSX.Element => {
   const isString = typeof Icon === "string";
 
+  const cardVariants: Variants = {
+    offscreen: {
+      x: 300,
+      opacity: 0
+    },
+    onscreen: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        bounce: 0.4,
+        duration: 1
+      }
+    }
+  };
+
   return (
-    <StackCard className={`${key}`} key={key}>
+    <StackCard variants={cardVariants} className={`${key}`} key={key}>
       <Text>{title}</Text>
       {isString ? (
         <img src={Icon} alt={title} title={title} height="60px" width="60px" />

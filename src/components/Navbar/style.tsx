@@ -6,14 +6,17 @@ export const Navbar = styled("nav", {
   background: "$grey0",
   borderBottom: "2px solid $brand1",
   position: "fixed",
-  inset: 0,
-  bottom: "auto",
+  //inset: 0,
+  //bottom: "auto",
   padding: "1rem 0",
-  width: "100%",
+  width: "100vw",
+  maxWidth: '100vw',
   zIndex: "99999",
 
   [`& ${Container}`]: {
     display: "flex",
+    width: "100%",
+    maxWidth: '100vw',
     justifyContent: "space-between",
     "@mobile": {
         flexDirection: "column"

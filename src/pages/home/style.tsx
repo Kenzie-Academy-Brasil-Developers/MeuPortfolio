@@ -1,7 +1,8 @@
 import { styled } from "@/styles/stitches.config";
 import { Flex } from "@/styles/Global";
 import { Button } from "@/styles/Buttons";
-import { css } from "@stitches/react"
+import { css } from "@stitches/react";
+import { motion, useViewportScroll } from "framer-motion";
 
 import img from "@/public/static/img/background/polygons1.svg";
 import dots from "@/public/static/img/background/dots.svg";
@@ -10,6 +11,7 @@ export const Header = styled("header", {
   backgroundColor: "$grey1",
   backgroundImage: `url(${img})`,
   overflowY: 'hidden',
+  overflowX: 'hidden',
   maxWidth: '100vw',
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
@@ -26,7 +28,7 @@ export const Header = styled("header", {
   },
 });
 
-export const HeaderContent = styled("div", {
+export const HeaderContent = styled(motion.div, {
   width: "70%",
   maxWidth: "80%",
   padding: "5px",
@@ -65,7 +67,7 @@ export const StackSection = styled("div", {
   padding: "4rem 0 2rem 0",
 });
 
-export const StackCards = styled("div", {
+export const StackCards = styled(motion.div, {
   'scroll-margin-block-start': '110px',
   /*Adds margin to the top of the viewport*/
   

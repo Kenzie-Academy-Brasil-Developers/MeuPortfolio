@@ -3,6 +3,8 @@ import { Container, Flex } from "@/styles/Global";
 import { Text } from "@/styles/Text";
 import { Button } from "@/styles/Buttons";
 import { Robot } from "@/components/RobotHi"
+import { motion, useViewportScroll, Variants } from "framer-motion";
+
 
 
 import { Stack } from "@/components/Stack";
@@ -29,13 +31,33 @@ import { GithubAnimation } from "@/components/GitHubAnimation";
 
 
 export const Home = (): JSX.Element => {
+  const { scrollYProgress } = useViewportScroll();
+
+  const flexVariant: Variants = {
+    offscreen: {
+      x: -300,
+      opacity: 0
+    },
+    onscreen: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        bounce: 0.3,
+        duration: 1.5
+      }
+    }
+  };
+
   return (
     <main id="home">
       <Header>
         <Container>
-          <HeaderContent>
+          <HeaderContent initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ amount: 0.5 }}>
           <Robot/>
-            <Flex>
+            <Flex variants={flexVariant}>
               <UserImage
                 src={`https://github.com/${userData.githubUser}.png`}
                 alt={userData.nameUser}
@@ -47,6 +69,7 @@ export const Home = (): JSX.Element => {
                 Hello, my name is {userData.nameUser}
               </Text>
             </Flex>
+            <motion.div variants={flexVariant}>
             <Text as="h1" type="heading1" color="grey4">
               <Text as="span" type="heading1" color="brand1">
                 Amo
@@ -74,14 +97,21 @@ export const Home = (): JSX.Element => {
                 <GithubAnimation/>
               </Button>
             </HeaderButtonsArea>
+
+            </motion.div>
+            
           </HeaderContent>
         </Container>
         
       </Header>
-      <StackCards id="technologies">
+      <StackCards id="technologies" initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ amount: 0.5 }}>
+       
               {stackData.map((stack, index) => (
                 <Stack key={index} title={stack.title} icon={stack.img} />
               ))}
+
       </StackCards>
       
       <ProjectsArea id="projects">

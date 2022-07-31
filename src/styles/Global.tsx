@@ -1,4 +1,5 @@
 import { createTheme, globalCss, styled } from "@stitches/react";
+import { motion } from "framer-motion";
 import { ReactNode } from "react";
 
 interface GlobalStyleProps {
@@ -15,7 +16,7 @@ export const Container = styled("div", {
   },
 });
 
-export const Flex = styled("div", {
+export const Flex = styled(motion.div, {
   display: "flex",
   gap: "$1",
   alignItems: "center",

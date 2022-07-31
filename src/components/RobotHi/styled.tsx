@@ -1,7 +1,8 @@
 import { styled } from "@/styles/stitches.config";
+import { motion } from "framer-motion";
 
 
-export const RobotStyled = styled("div", {
+export const RobotStyled = styled(motion.div, {
   width: "30%",
   position: "absolute",
   right: '-30%',
