@@ -37,7 +37,7 @@ export const Stack = (
       {isString ? (
         <img src={Icon} alt={title} title={title} height="60px" width="60px" />
       ) : (
-        <Icon size={60} color="#f56fc3" />
+        <Icon size={60} color="#a13e94" />
       )}
     </StackCard>
   );

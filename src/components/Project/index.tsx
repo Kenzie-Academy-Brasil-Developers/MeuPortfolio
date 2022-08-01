@@ -6,23 +6,26 @@ import {
   ProjectLink,
   ProjectLinks,
 } from "./style";
+import { userData } from "@/utils/userData";
+import { GithubAnimation } from "@/components/GitHubAnimation";
+import { Button } from "@/styles/Buttons";
+
 
 import { Text } from "@/styles/Text";
 import { useEffect, useState } from "react";
 import { FaGithub, FaShare } from "react-icons/fa";
-import { userData } from "@/utils/userData";
 import repositories from "@/utils/reposData";
-import { GithubAnimation } from "../GitHubAnimation";
+import { SliderProjects } from "../SliderProjects";
 
-interface ReposType {
+/*interface ReposType {
   id: number;
   name: string;
   language: string;
   description: string;
   html_url: string;
   homepage: string;
-  imgUrl: string;
-}
+  imgUrl: string[];
+}*/
 
 export const Project = (): JSX.Element => {
 
@@ -38,29 +41,11 @@ export const Project = (): JSX.Element => {
           >
             {repository.name}
           </ProjectTitle>
-
-          <ProjectStack>
-            <Text type="body2" color="grey2">
-              Linguagem:
-            </Text>
-            {repository.language ? (
-              <ProjectStackTech>
-                <Text color="grey2" type="body2">
-                  {repository.language}
-                </Text>
-              </ProjectStackTech>
-            ) : (
-              <ProjectStackTech>
-                <Text color="grey2" type="body2">
-                  Not identified
-                </Text>
-              </ProjectStackTech>
-            )}
-          </ProjectStack>
-
-          <Text type="body1" color="grey2">
+          
+          {repository.imgs && <SliderProjects languages={repository.languages} imgs={repository.imgs} description={repository.description}/>}
+          {!repository.imgs &&<Text type="body1" color="grey2">
             {repository.description?.substring(0, 129)}
-          </Text>
+            </Text>}
           <ProjectLinks>
             <ProjectLink target="_blank" href={repository.html_url}>
               <GithubAnimation/> Github Code
@@ -73,6 +58,20 @@ export const Project = (): JSX.Element => {
           </ProjectLinks>
         </ProjectWrapper>
       ))}
+
+      
+      
+      <Text style={{display: 'flex', alignItems: 'center', gap: '1rem'}} type="body1" color="grey2">
+      Veja mais projetos no github --&gt;
+      <Button
+                as="a"
+                type="circle"
+                target="_blank"
+                href={`https://github.com/${userData.githubUser}`}
+              >
+                <GithubAnimation/>
+            </Button>
+            </Text>
     </>
   );
 };

@@ -58,8 +58,10 @@ export const HeaderContent = styled(motion.div, {
   "#typing p": {
       borderRight: '.15em solid #ec8ee1',
       overflow: 'hidden',
+      //width:'0',
       //margin: '0 auto',
       animation: `${typing} 5s steps(30, end), ${blink} .75s step-end infinite`,
+      animationDelay: '0.2s',
 
       whiteSpace: 'nowrap',
   },
@@ -137,7 +139,7 @@ export const StackCards = styled(motion.div, {
 
 });
 
-export const ProjectsArea = styled("section", {
+export const ProjectsArea = styled(motion.section, {
   padding: "$section 0",
   backgroundColor: "$grey0",
   backgroundImage: `url(${dots})`,
@@ -149,7 +151,7 @@ export const ProjectsArea = styled("section", {
   },
 });
 
-export const ProjectsAreaSocialMediaMessage = styled("div", {
+export const ProjectsAreaSocialMediaMessage = styled(motion.div, {
   display: "flex",
   flexDirection: "column",
   gap: "2rem",
@@ -162,7 +164,7 @@ export const ProjectsAreaSocialMediaMessage = styled("div", {
   },
 });
 
-export const ProjectsAreaContent = styled("div", {
+export const ProjectsAreaContent = styled(motion.div, {
   width: "100%",
   //height: '70vh',
   //overflowY: 'scroll',

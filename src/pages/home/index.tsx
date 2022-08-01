@@ -49,6 +49,22 @@ export const Home = (): JSX.Element => {
     }
   };
 
+  const projectsVariants: Variants = {
+    offscreen: {
+      x: -100,
+      opacity: 0,
+    },
+    onscreen: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        bounce: 0.3,
+        duration: 1.5
+      }
+    }
+  };
+
   return (
     <main id="home">
       <Header>
@@ -115,10 +131,12 @@ export const Home = (): JSX.Element => {
 
       </StackCards>
       
-      <ProjectsArea id="projects">
+      <ProjectsArea id="projects" initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ amount: 0.2 }}>
         <Container>
           <ProjectAreaWrapperColumns>
-            <ProjectsAreaSocialMediaMessage>
+            <ProjectsAreaSocialMediaMessage variants={projectsVariants}>
               <Text as="h2" type="heading4" color="grey4">
                 Meus projetos
               </Text>
@@ -129,7 +147,7 @@ export const Home = (): JSX.Element => {
                 </Text>
               </Text>*/}
             </ProjectsAreaSocialMediaMessage>
-            <ProjectsAreaContent>
+            <ProjectsAreaContent variants={projectsVariants}>
               <Project />
             </ProjectsAreaContent>
           </ProjectAreaWrapperColumns>

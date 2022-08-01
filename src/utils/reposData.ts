@@ -1,8 +1,64 @@
+import imageNoW1 from "../public/static/img/projects/nowaste1.png"
+import imageNoW2 from "../public/static/img/projects/nowaste2.png"
+import imageNoW3 from "../public/static/img/projects/nowaste3.png"
+import imageNoW4 from "../public/static/img/projects/nowaste4.png"
+import imageNoW5 from "../public/static/img/projects/nowaste5.png"
+import imageNoW6 from "../public/static/img/projects/nowaste6.png"
+import imageNoW7 from "../public/static/img/projects/nowaste7.png"
+import imageNoW8 from "../public/static/img/projects/nowaste8.png"
+import imageNoW9 from "../public/static/img/projects/nowaste9.png"
+import imageNoW10 from "../public/static/img/projects/nowaste10.png"
+import imageNoW11 from "../public/static/img/projects/nowaste11.png"
+
+import imageKenHu1 from "../public/static/img/projects/kenzieHub1.png"
+import imageKenHu2 from "../public/static/img/projects/kenzieHub2.png"
+import imageKenHu3 from "../public/static/img/projects/kenzieHub3.png"
+import imageKenHu4 from "../public/static/img/projects/kenzieHub4.png"
+import imageKenHu5 from "../public/static/img/projects/kenzieHub5.png"
+import imageKenHu6 from "../public/static/img/projects/kenzieHub6.png"
+import imageKenHu7 from "../public/static/img/projects/kenzieHub7.png"
+
+import imageLig41 from "../public/static/img/projects/lig41.png"
+import imageLig42 from "../public/static/img/projects/lig42.png"
+import imageLig43 from "../public/static/img/projects/lig40.png"
+
+import imageGenius1 from "../public/static/img/projects/genius1.png"
+import imageGenius2 from "../public/static/img/projects/genius2.png"
+import imageGenius3 from "../public/static/img/projects/genius3.png"
+import imageGenius4 from "../public/static/img/projects/genius4.png"
+
+import imageNuK1 from "../public/static/img/projects/nuKenzie1.png"
+import imageNuK12 from "../public/static/img/projects/nuKenzie12.png"
+import imageNuK2 from "../public/static/img/projects/nuKenzie2.png"
+import imageNuK3 from "../public/static/img/projects/nuKenzie3.png"
+
+import burguer1 from "../public/static/img/projects/burguer1.png"
+import burguer2 from "../public/static/img/projects/burguer2.png"
+import burguer3 from "../public/static/img/projects/burguer3.png"
+import burguer4 from "../public/static/img/projects/burguer4.png"
+
+
+
+
+
+import imgHTML from "../public/static/img/stack/html.svg";
+import imgCSS from "../public/static/img/stack/css.svg";
+import imgJS from "../public/static/img/stack/js.svg";
+import imgNode from "../public/static/img/stack/node.svg";
+import imgStyled from "../public/static/img/stack/styled.svg";
+import imgReact from "../public/static/img/stack/react.svg";
+import { SiTypescript, SiPython, SiRedux } from "react-icons/si";
+
+
+
+
 const reposData = [
     {
       "id": 510497519,
       "node_id": "R_kgDOHm2S7w",
+      "languages": [imgJS, imgReact, imgStyled],
       "name": "NoWaste",
+      "imgs": [imageNoW1, imageNoW3, imageNoW2, imageNoW4, imageNoW5, imageNoW6, imageNoW7, imageNoW8, imageNoW9, imageNoW10, imageNoW11],
       "full_name": "vih-cisne/No-Waste",
       "private": false,
       "owner": {
@@ -103,6 +159,8 @@ const reposData = [
     {
         "id": 502952201,
         "node_id": "R_kgDOHfpxCQ",
+        "languages": [imgJS, imgReact, imgStyled],
+        "imgs": [imageKenHu1, imageKenHu1, imageKenHu2, imageKenHu3, imageKenHu4, imageKenHu5, imageKenHu6, imageKenHu7],
         "name": "KenzieHub",
         "full_name": "vih-cisne/kenziehub-vih-cisne",
         "private": false,
@@ -205,6 +263,8 @@ const reposData = [
       "id": 496178770,
       "node_id": "R_kgDOHZMWUg",
       "name": "NuKenzie",
+      "languages": [imgJS, imgReact, imgStyled],
+      "imgs": [imageNuK1, imageNuK1, imageNuK12, imageNuK2, imageNuK3],
       "full_name": "vih-cisne/nukenzie-vih-cisne",
       "private": false,
       "owner": {
@@ -305,6 +365,8 @@ const reposData = [
     {
         "id": 497930457,
         "name": "BurguerKenzie",
+        "languages": [imgJS, imgReact, imgStyled],
+        "imgs":[burguer2, burguer1, burguer3, burguer4],
         "html_url": "https://github.com/vih-cisne/hamburgueria-vih-cisne",
         "description": "Aplicação feita com react, simulando uma hamburgueria",
         "url": "https://api.github.com/repos/vih-cisne/hamburgueria-vih-cisne",
@@ -370,6 +432,8 @@ const reposData = [
       {
         "id": 482833672,
         "node_id": "R_kgDOHMd1CA",
+        "languages": [imgJS, imgCSS],
+        "imgs": [imageLig41, imageLig42, imageLig43],
         "name": "Lig4-POO",
         "full_name": "vih-cisne/S4-05-Atividade---POO-Lig4-em-POO",
         "private": false,
@@ -394,7 +458,7 @@ const reposData = [
           "site_admin": false
         },
         "html_url": "https://github.com/vih-cisne/S4-05-Atividade---POO-Lig4-em-POO",
-        "description": null,
+        "description": "Jogo lig4 construído com classes Javascript",
         "fork": false,
         "url": "https://api.github.com/repos/vih-cisne/S4-05-Atividade---POO-Lig4-em-POO",
         "forks_url": "https://api.github.com/repos/vih-cisne/S4-05-Atividade---POO-Lig4-em-POO/forks",
@@ -440,7 +504,7 @@ const reposData = [
         "ssh_url": "git@github.com:vih-cisne/S4-05-Atividade---POO-Lig4-em-POO.git",
         "clone_url": "https://github.com/vih-cisne/S4-05-Atividade---POO-Lig4-em-POO.git",
         "svn_url": "https://github.com/vih-cisne/S4-05-Atividade---POO-Lig4-em-POO",
-        "homepage": null,
+        "homepage": "https://lig4poo.vercel.app/",
         "size": 12,
         "stargazers_count": 0,
         "watchers_count": 0,
@@ -469,6 +533,109 @@ const reposData = [
         "default_branch": "main"
       },
       {
+        "id": 475139761,
+        "node_id": "R_kgDOHFIOsQ",
+        "name": "Genius",
+        "imgs": [imageGenius1, imageGenius1, imageGenius2, imageGenius3, imageGenius4],
+        "languages": [imgJS, imgCSS],
+        "full_name": "vih-cisne/genius",
+        "private": false,
+        "owner": {
+          "login": "vih-cisne",
+          "id": 98762779,
+          "node_id": "U_kgDOBeMAGw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/98762779?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/vih-cisne",
+          "html_url": "https://github.com/vih-cisne",
+          "followers_url": "https://api.github.com/users/vih-cisne/followers",
+          "following_url": "https://api.github.com/users/vih-cisne/following{/other_user}",
+          "gists_url": "https://api.github.com/users/vih-cisne/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/vih-cisne/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/vih-cisne/subscriptions",
+          "organizations_url": "https://api.github.com/users/vih-cisne/orgs",
+          "repos_url": "https://api.github.com/users/vih-cisne/repos",
+          "events_url": "https://api.github.com/users/vih-cisne/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/vih-cisne/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "html_url": "https://github.com/vih-cisne/genius",
+        "description": "Jogo da memória criado na década de 80 em que, aleatoriamente, será apresentada uma sequência de luzes e o usuário deverá repetir a sequência sorteada.",
+        "fork": false,
+        "url": "https://api.github.com/repos/vih-cisne/genius",
+        "forks_url": "https://api.github.com/repos/vih-cisne/genius/forks",
+        "keys_url": "https://api.github.com/repos/vih-cisne/genius/keys{/key_id}",
+        "collaborators_url": "https://api.github.com/repos/vih-cisne/genius/collaborators{/collaborator}",
+        "teams_url": "https://api.github.com/repos/vih-cisne/genius/teams",
+        "hooks_url": "https://api.github.com/repos/vih-cisne/genius/hooks",
+        "issue_events_url": "https://api.github.com/repos/vih-cisne/genius/issues/events{/number}",
+        "events_url": "https://api.github.com/repos/vih-cisne/genius/events",
+        "assignees_url": "https://api.github.com/repos/vih-cisne/genius/assignees{/user}",
+        "branches_url": "https://api.github.com/repos/vih-cisne/genius/branches{/branch}",
+        "tags_url": "https://api.github.com/repos/vih-cisne/genius/tags",
+        "blobs_url": "https://api.github.com/repos/vih-cisne/genius/git/blobs{/sha}",
+        "git_tags_url": "https://api.github.com/repos/vih-cisne/genius/git/tags{/sha}",
+        "git_refs_url": "https://api.github.com/repos/vih-cisne/genius/git/refs{/sha}",
+        "trees_url": "https://api.github.com/repos/vih-cisne/genius/git/trees{/sha}",
+        "statuses_url": "https://api.github.com/repos/vih-cisne/genius/statuses/{sha}",
+        "languages_url": "https://api.github.com/repos/vih-cisne/genius/languages",
+        "stargazers_url": "https://api.github.com/repos/vih-cisne/genius/stargazers",
+        "contributors_url": "https://api.github.com/repos/vih-cisne/genius/contributors",
+        "subscribers_url": "https://api.github.com/repos/vih-cisne/genius/subscribers",
+        "subscription_url": "https://api.github.com/repos/vih-cisne/genius/subscription",
+        "commits_url": "https://api.github.com/repos/vih-cisne/genius/commits{/sha}",
+        "git_commits_url": "https://api.github.com/repos/vih-cisne/genius/git/commits{/sha}",
+        "comments_url": "https://api.github.com/repos/vih-cisne/genius/comments{/number}",
+        "issue_comment_url": "https://api.github.com/repos/vih-cisne/genius/issues/comments{/number}",
+        "contents_url": "https://api.github.com/repos/vih-cisne/genius/contents/{+path}",
+        "compare_url": "https://api.github.com/repos/vih-cisne/genius/compare/{base}...{head}",
+        "merges_url": "https://api.github.com/repos/vih-cisne/genius/merges",
+        "archive_url": "https://api.github.com/repos/vih-cisne/genius/{archive_format}{/ref}",
+        "downloads_url": "https://api.github.com/repos/vih-cisne/genius/downloads",
+        "issues_url": "https://api.github.com/repos/vih-cisne/genius/issues{/number}",
+        "pulls_url": "https://api.github.com/repos/vih-cisne/genius/pulls{/number}",
+        "milestones_url": "https://api.github.com/repos/vih-cisne/genius/milestones{/number}",
+        "notifications_url": "https://api.github.com/repos/vih-cisne/genius/notifications{?since,all,participating}",
+        "labels_url": "https://api.github.com/repos/vih-cisne/genius/labels{/name}",
+        "releases_url": "https://api.github.com/repos/vih-cisne/genius/releases{/id}",
+        "deployments_url": "https://api.github.com/repos/vih-cisne/genius/deployments",
+        "created_at": "2022-03-28T18:58:27Z",
+        "updated_at": "2022-08-01T16:59:44Z",
+        "pushed_at": "2022-08-01T17:04:34Z",
+        "git_url": "git://github.com/vih-cisne/genius.git",
+        "ssh_url": "git@github.com:vih-cisne/genius.git",
+        "clone_url": "https://github.com/vih-cisne/genius.git",
+        "svn_url": "https://github.com/vih-cisne/genius",
+        "homepage": "https://genius-penguins.vercel.app/",
+        "size": 30427,
+        "stargazers_count": 0,
+        "watchers_count": 0,
+        "language": "JavaScript",
+        "has_issues": true,
+        "has_projects": true,
+        "has_downloads": true,
+        "has_wiki": true,
+        "has_pages": false,
+        "forks_count": 0,
+        "mirror_url": null,
+        "archived": false,
+        "disabled": false,
+        "open_issues_count": 0,
+        "license": null,
+        "allow_forking": true,
+        "is_template": false,
+        "web_commit_signoff_required": false,
+        "topics": [
+    
+        ],
+        "visibility": "public",
+        "forks": 0,
+        "open_issues": 0,
+        "watchers": 0,
+        "default_branch": "master"
+      },
+      /*{
         "id": 509760068,
         "node_id": "R_kgDOHmJSRA",
         "name": "NoWaste-API",
@@ -770,7 +937,7 @@ const reposData = [
         "open_issues": 0,
         "watchers": 0,
         "default_branch": "master"
-      }
+      }*/
 ]
 
 export default reposData
