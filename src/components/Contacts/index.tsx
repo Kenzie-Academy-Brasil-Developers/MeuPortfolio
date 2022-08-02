@@ -80,7 +80,9 @@ export const Contacts = () => {
           <ContactAnimation/>
             </ContactSectionText>
           </motion.div>
-          <ContactsCards  variants={flexVariant}>
+          <ContactsCards initial="offscreen"
+    whileInView="onscreen"
+    viewport={{ amount: 0.5 }}>
             <FormEmail/>
             {/*<ContactCard>
               <ContactCardImage className="wpp">

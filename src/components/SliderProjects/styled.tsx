@@ -84,8 +84,8 @@ export const SliderLeft = styled('div', {
 export const SliderRight = styled('div', {
     position: 'absolute',
     zIndex: '2',
-    top: '45%',
-    height: "5%",
+    top: '40%',
+    height: "10%",
     right: '0.2rem',
     cursor: "pointer",
     color:'$grey4',
