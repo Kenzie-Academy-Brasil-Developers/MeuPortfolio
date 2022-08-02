@@ -129,7 +129,7 @@ export const Home = (): JSX.Element => {
       </Header>
       <StackCards id="technologies" initial="offscreen"
       whileInView="onscreen"
-      viewport={{ amount: 0.5 }}>
+      viewport={{ amount: 0.1 }}>
        
               {stackData.map((stack, index) => (
                 <Stack key={index} title={stack.title} icon={stack.img} />
@@ -139,7 +139,7 @@ export const Home = (): JSX.Element => {
       
       <ProjectsArea id="projects" initial="offscreen"
       whileInView="onscreen"
-      viewport={{ amount: 0.2 }}>
+      viewport={{ amount: 0.1 }}>
         <Container>
           <ProjectAreaWrapperColumns>
             <ProjectsAreaSocialMediaMessage variants={projectsVariants}>
