@@ -5,6 +5,7 @@ import { Home } from '@/pages/home';
 import { NavBar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <GlobalStyle>

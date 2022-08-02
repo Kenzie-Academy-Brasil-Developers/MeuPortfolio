@@ -1,7 +1,7 @@
 import { styled } from "@/styles/stitches.config";
 
 export const ContactSection = styled("section", {
-  background: "$grey1",
+  background: 'linear-gradient(90deg, rgba(101,29,94,0.7) 0%, rgba(20,6,20,0.7) 50%, rgba(0,0,0,0.7) 100%)',
   padding: "$section 0",
   "@mobile": {
     padding: "$sectionMobile 0",

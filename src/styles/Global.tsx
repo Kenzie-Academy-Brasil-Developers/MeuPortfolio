@@ -105,8 +105,8 @@ export const GlobalStyle: React.FC<GlobalStyleProps> = ({ children }) => {
       grey4: "#F8F9FA",
       grey5: "#F8F9FA",
 
-      socialInstagram: "#CF50AC",
-      socialFacebook: "#506CCF",
+      socialWhatsapp: "#3b9f5a",
+      socialEmail: "#CF50AC",
       socialLinkedin: "#0E76A8",
 
       whiteFixed: "#ffffff",

@@ -26,8 +26,10 @@ import {
   ProjectsAreaSocialMediaMessage,
   ProjectAreaWrapperColumns,
   ProjectsAreaContent,
+  ContainerImage,
 } from "./style";
 import { GithubAnimation } from "@/components/GitHubAnimation";
+import user from "../../public/static/img/logo/userME.png"
 
 
 export const Home = (): JSX.Element => {
@@ -74,13 +76,17 @@ export const Home = (): JSX.Element => {
       viewport={{ amount: 0.5 }}>
           <Robot/>
             <Flex variants={flexVariant}>
-              <UserImage
-                src={`https://github.com/${userData.githubUser}.png`}
-                alt={userData.nameUser}
-                title={userData.nameUser}
-                width={"60px"}
-                height={"60px"}
-              />
+            <ContainerImage>
+          <UserImage
+            src={user}
+            alt={userData.nameUser}
+            title={userData.nameUser}
+            width={"100px"}
+            height={"100px"}
+          />
+          <div></div>
+          </ContainerImage>
+              
               <div id='typing'>
               <Text color="grey4">
                 Olá, me chamo Vitória

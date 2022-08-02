@@ -15,6 +15,9 @@ import {
 import { FaWhatsapp, FaEnvelopeOpen, FaLinkedin } from "react-icons/fa";
 import { useRef } from "react";
 import { userData } from "@/utils/userData";
+import { ContactAnimation } from "../ContactAnimation";
+import { FormEmail } from "../FormEmail";
+import { ContactButtons } from "../ContactButtons";
 
 export const Contacts = () => {
   const ref = useRef(null);
@@ -23,14 +26,16 @@ export const Contacts = () => {
 
   return (
     <ContactSection id="contact">
+      
       <Container>
+        <ContactButtons/>
         <ContactSectionContent ref={ref}>
           <motion.div style={{ opacity: scrollYProgress }}>
             <ContactSectionText>
               <Text type="heading2" color="grey4">
               Vamos marcar uma conversa e{" "}
                 <Text as="span" type="heading2" color="brand1">
-                desenvolver nossa criatividade
+                desenvolver algo
                 </Text>{" "}
                 juntos?
               </Text>
@@ -38,10 +43,12 @@ export const Contacts = () => {
                 Advertise your brand organically within Dribbble’s design
                 inspiration feed.
   </Text>*/}
+          <ContactAnimation/>
             </ContactSectionText>
           </motion.div>
           <ContactsCards>
-            <ContactCard>
+            <FormEmail/>
+            {/*<ContactCard>
               <ContactCardImage className="wpp">
                 <FaWhatsapp color="#fff" size={24} />
               </ContactCardImage>
@@ -107,7 +114,7 @@ export const Contacts = () => {
                   Ir para Linkedin agora
                 </Text>
               </ContactCardContent>
-            </ContactCard>
+</ContactCard>*/}
           </ContactsCards>
         </ContactSectionContent>
       </Container>

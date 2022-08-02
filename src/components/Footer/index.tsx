@@ -6,6 +6,8 @@ import { userData } from "@/utils/userData";
 import { FaLinkedinIn, FaInstagram, FaFacebookF } from "react-icons/fa";
 import { Button } from "@/styles/Buttons";
 import { HandEffect } from "../HandEffect";
+import { ContactButtons } from "../ContactButtons";
+import user from "../../public/static/img/logo/userME.png"
 
 export const Footer = (): JSX.Element => {
   return (
@@ -13,15 +15,15 @@ export const Footer = (): JSX.Element => {
       <Container>
         <Flex>
           <UserImage
-            src={`https://github.com/${userData.githubUser}.png`}
+            src={user}
             alt={userData.nameUser}
             title={userData.nameUser}
-            width={"70px"}
-            height={"70px"}
+            width={"80px"}
+            height={"80px"}
           />
           <Box css={{ marginLeft: "$2" }}>
             <Text type="heading4" color="grey5" css={{ marginBottom: "$2" }}>
-              Obrigada!{" "}
+              Até mais!{" "}
              <HandEffect />
             </Text>
             {/*<Text type="body1" color="grey2">
@@ -36,10 +38,14 @@ export const Footer = (): JSX.Element => {
           </Button>
           <Button className="facebook" type="circle" as="a" target="_blank" href={`https://fb.com`}>
             <FaFacebookF />
-</Button>*/}
           <Button className="linkedin" type="circle" as="a" target="_blank" href={`https://linkedin.com/in/${userData.linkedinUser}`}>
             <FaLinkedinIn />
           </Button>
+</Button>*/}
+        <div style={{display: 'flex', color: 'grey', gap: '0.5rem', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+        <ContactButtons/>
+        <small> © Copyright - All rights reserved</small>
+        </div>
         </Flex>
       </Container>
     </FooterWrapper>

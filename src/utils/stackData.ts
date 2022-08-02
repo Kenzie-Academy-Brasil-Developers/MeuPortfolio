@@ -4,7 +4,7 @@ import imgJS from "../public/static/img/stack/js.svg";
 import imgNode from "../public/static/img/stack/node.svg";
 import imgStyled from "../public/static/img/stack/styled.svg";
 import imgReact from "../public/static/img/stack/react.svg";
-import { SiTypescript, SiPython, SiRedux } from "react-icons/si";
+import { SiTypescript, SiPython, SiRedux, SiPostgresql } from "react-icons/si";
 
 
 export const stackData = [
@@ -13,11 +13,6 @@ export const stackData = [
     img: imgJS,
   },
   { title: "Typescript", img: SiTypescript },
-  {
-    title: "Node JS",
-    img: imgNode,
-  },
-  { title: "Python", img: SiPython },
   {
     title: "React",
     img: imgReact,
@@ -34,7 +29,16 @@ export const stackData = [
   {
     title: "CSS3",
     img: imgCSS,
-  }
+  },
+  {
+    title: "Node JS",
+    img: imgNode,
+  },
+  { title: "Python", img: SiPython },
+  {
+    title: "PostgreSQL",
+    img: SiPostgresql,
+  },
 ];
 
 

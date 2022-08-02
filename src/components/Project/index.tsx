@@ -61,8 +61,10 @@ export const Project = (): JSX.Element => {
 
       
       
-      <Text style={{display: 'flex', alignItems: 'center', gap: '1rem'}} type="body1" color="grey2">
+      <div style={{display: 'flex', alignItems: 'center', gap: '1rem'}}><Text  type="body1" color="grey2">
       Veja mais projetos no github --&gt;
+      
+      </Text>
       <Button
                 as="a"
                 type="circle"
@@ -70,8 +72,7 @@ export const Project = (): JSX.Element => {
                 href={`https://github.com/${userData.githubUser}`}
               >
                 <GithubAnimation/>
-            </Button>
-            </Text>
+            </Button></div>
     </>
   );
 };

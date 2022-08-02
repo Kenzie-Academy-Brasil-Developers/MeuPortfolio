@@ -14,6 +14,7 @@ import { FaGithub, FaLinkedinIn, FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { Button } from "@/styles/Buttons";
 import { Container } from "@/styles/Global";
+import { ContactButtons } from "../ContactButtons";
 
 export interface MenuButtonOpen {
   open: Boolean;

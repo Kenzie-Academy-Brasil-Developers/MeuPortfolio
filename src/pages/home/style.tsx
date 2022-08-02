@@ -77,12 +77,33 @@ export const HeaderButtonsArea = styled(Flex, {
 });
 
 export const UserImage = styled("img", {
-  borderRadius: "50%",
+  borderRadius: '60% 40% 10% 40%',
+  //border: '2px solid pink',
+  zIndex:'3',
+  objectFit: 'cover',
   "@mobile": {
     width: "2.25rem",
     height: "2.25rem",
   },
 });
+
+export const ContainerImage = styled('div', {
+  position: 'relative',
+  zIndex:'34',
+  '>div': {
+    zIndex:'-2',
+    content: '',
+    width: '100%',
+    height: '100%',
+    borderRadius: '60% 40% 10% 40%',
+    backgroundColor: '#d896d0',
+    //z-index: 1;
+    right: '20%',
+    top: '10%',
+    position: 'absolute',
+},
+
+})
 
 export const StackSection = styled("div", {
   backgroundColor: "$grey4",
