@@ -1,6 +1,6 @@
 import { Container } from "@/styles/Global";
 import { Text } from "@/styles/Text";
-import { motion, useViewportScroll } from "framer-motion";
+import { motion, useViewportScroll, Variants } from "framer-motion";
 
 import {
   ContactSection,
@@ -24,13 +24,47 @@ export const Contacts = () => {
 
   const { scrollYProgress } = useViewportScroll();
 
+  const flexVariant: Variants = {
+    offscreen: {
+      x: 300,
+      opacity: 0,
+    },
+    onscreen: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        bounce: 0.3,
+        duration: 1.5
+      }
+    }
+  };
+
+  const flexInvertVariant: Variants = {
+    offscreen: {
+      x: '-100%',
+      opacity: 0,
+    },
+    onscreen: {
+      x: '0%',
+      opacity: 1,
+      transition: {
+        type: "spring",
+        bounce: 0.3,
+        duration: 1.5
+      }
+    }
+  };
+
   return (
-    <ContactSection id="contact">
+    <ContactSection id="contact" initial="offscreen"
+    whileInView="onscreen"
+    viewport={{ amount: 0.5 }}>
       
       <Container>
         <ContactButtons/>
         <ContactSectionContent ref={ref}>
-          <motion.div style={{ opacity: scrollYProgress }}>
+          <motion.div variants={flexInvertVariant} style={{ opacity: scrollYProgress }}>
             <ContactSectionText>
               <Text type="heading2" color="grey4">
               Vamos marcar uma conversa e{" "}
@@ -46,7 +80,7 @@ export const Contacts = () => {
           <ContactAnimation/>
             </ContactSectionText>
           </motion.div>
-          <ContactsCards>
+          <ContactsCards  variants={flexVariant}>
             <FormEmail/>
             {/*<ContactCard>
               <ContactCardImage className="wpp">

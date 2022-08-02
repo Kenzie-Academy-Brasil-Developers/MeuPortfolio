@@ -129,7 +129,7 @@ export const Home = (): JSX.Element => {
       </Header>
       <StackCards id="technologies" initial="offscreen"
       whileInView="onscreen"
-      viewport={{ amount: 0.1 }}>
+      viewport={{ amount: 0.2 }}>
        
               {stackData.map((stack, index) => (
                 <Stack key={index} title={stack.title} icon={stack.img} />

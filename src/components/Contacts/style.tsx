@@ -1,6 +1,7 @@
 import { styled } from "@/styles/stitches.config";
+import { motion } from "framer-motion";
 
-export const ContactSection = styled("section", {
+export const ContactSection = styled(motion.section, {
   background: 'linear-gradient(90deg, rgba(101,29,94,0.7) 0%, rgba(20,6,20,0.7) 50%, rgba(0,0,0,0.7) 100%)',
   padding: "$section 0",
   "@mobile": {
@@ -29,7 +30,7 @@ export const ContactSectionText = styled("aside", {
   },
 });
 
-export const ContactsCards = styled("div", {
+export const ContactsCards = styled(motion.div, {
   display: "flex",
   flexDirection: "column",
   width: "50%",
