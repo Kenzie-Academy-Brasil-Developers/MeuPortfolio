@@ -9,6 +9,7 @@ import {
 import { userData } from "@/utils/userData";
 import { GithubAnimation } from "@/components/GitHubAnimation";
 import { Button } from "@/styles/Buttons";
+import { Variants } from "framer-motion"
 
 
 import { Text } from "@/styles/Text";
@@ -27,12 +28,16 @@ import { SliderProjects } from "../SliderProjects";
   imgUrl: string[];
 }*/
 
+
+
 export const Project = (): JSX.Element => {
 
   return (
     <>
-      {repositories?.map((repository) => (
-        <ProjectWrapper key={repository.id}>
+      {repositories?.map((repository, index) => (
+        <ProjectWrapper  initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ amount: 0.4 }} key={repository.id} >
           <ProjectTitle
             as="h2"
             type="heading3"
@@ -42,7 +47,7 @@ export const Project = (): JSX.Element => {
             {repository.name}
           </ProjectTitle>
           
-          {repository.imgs && <SliderProjects languages={repository.languages} imgs={repository.imgs} description={repository.description}/>}
+          {repository.imgs && <SliderProjects index={index} languages={repository.languages} imgs={repository.imgs} description={repository.description}/>}
           {!repository.imgs &&<Text type="body1" color="grey2">
             {repository.description?.substring(0, 129)}
             </Text>}

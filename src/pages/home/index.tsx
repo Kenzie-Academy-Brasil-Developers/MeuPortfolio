@@ -67,6 +67,7 @@ export const Home = (): JSX.Element => {
     }
   };
 
+
   return (
     <main id="home">
       <Header>
@@ -137,9 +138,7 @@ export const Home = (): JSX.Element => {
 
       </StackCards>
       
-      <ProjectsArea id="projects" initial="offscreen"
-      whileInView="onscreen"
-      viewport={{ amount: 0.1 }}>
+      <ProjectsArea id="projects" >
         <Container>
           <ProjectAreaWrapperColumns>
             <ProjectsAreaSocialMediaMessage variants={projectsVariants}>
@@ -153,7 +152,7 @@ export const Home = (): JSX.Element => {
                 </Text>
               </Text>*/}
             </ProjectsAreaSocialMediaMessage>
-            <ProjectsAreaContent variants={projectsVariants}>
+            <ProjectsAreaContent>
               <Project />
             </ProjectsAreaContent>
           </ProjectAreaWrapperColumns>

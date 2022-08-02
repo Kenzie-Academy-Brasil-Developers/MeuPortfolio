@@ -3,21 +3,38 @@ import { DescriptionSlider, ImgSlider, Languages, Slider, SliderLeft, SliderRigh
 import { Text } from "@/styles/Text";
 import { MdOutlineChevronLeft, MdOutlineChevronRight } from "react-icons/md";
 import { IconType } from "react-icons/lib";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 
 
 interface SliderProjectsProps {
     description: string;
     imgs: string[];
-    languages: string[] | null
+    languages: string[] | null;
+    index: number;
 }
 
-export const SliderProjects = ({description, imgs, languages }: SliderProjectsProps) /*: JSX.Element*/ => {
+export const SliderProjects = ({description, imgs, languages, index }: SliderProjectsProps) /*: JSX.Element*/ => {
 
     const [currentSlide, setCurrentSlide] = useState(0)
 
-    return (<Slider>
+    const projectsVariants: Variants = {
+        offscreen: {
+          x: index%2 === 0 ? '-100%' : '100%',
+          opacity: 0,
+        },
+        onscreen: {
+          x: 0,
+          opacity: 1,
+          transition: {
+            type: "spring",
+            bounce: 0.3,
+            duration: 1.5
+          }
+        }
+      };
+
+    return (<Slider variants={projectsVariants}>
         {imgs?.map((img, index) => {
             return index === currentSlide && (<ImgSlider animate={{x: [100, 0]}} key={index}>   
             

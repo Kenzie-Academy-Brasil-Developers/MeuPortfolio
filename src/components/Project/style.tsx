@@ -1,6 +1,7 @@
 import { styled } from "@/styles/stitches.config"
 import { Flex } from "@/styles/Global"
 import { Text } from "@/styles/Text";
+import { motion } from "framer-motion";
 
 export const ProjectStack = styled(Flex, {
   margin: "1.25rem 0 1.25rem 0",
@@ -47,7 +48,7 @@ export const ProjectLink = styled("a", {
 export const ProjectTitle = styled(Text, {
 })
 
-export const Project = styled("article", {
+export const Project = styled(motion.article, {
   marginTop: "4rem",
   [`&:first-child`]: {
     [`& ${ProjectTitle}:first-child`]: {
