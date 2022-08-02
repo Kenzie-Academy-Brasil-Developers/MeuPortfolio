@@ -24,22 +24,6 @@ export const Contacts = () => {
 
   const { scrollYProgress } = useViewportScroll();
 
-  const flexVariant: Variants = {
-    offscreen: {
-      x: 300,
-      opacity: 0,
-    },
-    onscreen: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        bounce: 0.3,
-        duration: 1.5
-      }
-    }
-  };
-
   const flexInvertVariant: Variants = {
     offscreen: {
       x: '-100%',
@@ -59,7 +43,7 @@ export const Contacts = () => {
   return (
     <ContactSection id="contact" initial="offscreen"
     whileInView="onscreen"
-    viewport={{ amount: 0.5 }}>
+    viewport={{ amount: 0.3 }}>
       
       <Container>
         <ContactButtons/>
@@ -80,9 +64,7 @@ export const Contacts = () => {
           <ContactAnimation/>
             </ContactSectionText>
           </motion.div>
-          <ContactsCards initial="offscreen"
-    whileInView="onscreen"
-    viewport={{ amount: 0.5 }}>
+          <ContactsCards>
             <FormEmail/>
             {/*<ContactCard>
               <ContactCardImage className="wpp">

@@ -5,7 +5,6 @@ import emailjs from 'emailjs-com';
 import { usePresence, AnimatePresence } from "framer-motion"
 import Lottie from "react-lottie";
 import animationSuccess from "../../animations/95088-success.json";
-import { motion, Variants } from "framer-motion"
 
 
 
@@ -60,26 +59,10 @@ export const FormEmail = () => {
     !isPresent && setTimeout(safeToRemove, 1000)
   }, [isPresent])
 
-  const flexVariant: Variants = {
-    offscreen: {
-      x: 300,
-      opacity: 0,
-    },
-    onscreen: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        bounce: 0.3,
-        duration: 1.5
-      }
-    }
-  };
-
 
     return (
         <>
-        <motion.div variants={flexVariant} style={{width: '90%', alignSelf: 'center', justifySelf: 'center'}}>
+        <div style={{width: '90%', alignSelf: 'center', justifySelf: 'center'}}>
             <FormStyled ref={form} onSubmit={sendEmail}>
             <input placeholder="Nome" name="name" required/>
             <input type='email' placeholder="Seu e-mail" name="email" required/>
@@ -88,7 +71,7 @@ export const FormEmail = () => {
                 Enviar email
             </Button>
         </FormStyled>
-        </motion.div>
+        </div>
         <AnimatePresence>
         {success && <ToastMaker initial={{ x: '100%' }}
       animate={{ x: '0%' }}
