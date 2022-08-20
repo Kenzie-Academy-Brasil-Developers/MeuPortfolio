@@ -4,7 +4,9 @@ import imgJS from "../public/static/img/stack/js.svg";
 import imgNode from "../public/static/img/stack/node.svg";
 import imgStyled from "../public/static/img/stack/styled.svg";
 import imgReact from "../public/static/img/stack/react.svg";
-import { SiTypescript, SiPython, SiRedux, SiPostgresql } from "react-icons/si";
+import { GrDocker } from "react-icons/gr";
+import { FaDocker} from "react-icons/fa";
+import { SiTypescript, SiPython, SiRedux, SiPostgresql, SiMongodb } from "react-icons/si";
 
 
 export const stackData = [
@@ -39,6 +41,14 @@ export const stackData = [
     title: "PostgreSQL",
     img: SiPostgresql,
   },
+  {
+    title: "Docker",
+    img: GrDocker,
+  },
+  {
+    title: "MongoDB",
+    img: SiMongodb,
+  }
 ];
 
 
